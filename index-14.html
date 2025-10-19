@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Manuja Pabodhana - Software Engineer specializing in Java, JavaScript, Node.js, and PHP with expertise in React.js, Express.js, and Laravel. Building efficient, scalable web applications.">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <title>Manuja Pabodhana - Software Engineer</title>
+    <!-- Bootstrap min css -->
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper.css">
+    <link rel="stylesheet" href="assets/css/plugins/odometer.css">
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .theme-gradient {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-caption .theme-gradient {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tmp-btn {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+            border: none;
+            color: white;
+        }
+
+        .tmp-btn:hover {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+        }
+
+        .skill-badge {
+            display: inline-block;
+            background: rgba(106, 17, 203, 0.1);
+            color: #6a11cb;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9rem;
+        }
+
+        .project-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        }
+
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 17px;
+            width: 2px;
+            height: calc(100% - 12px);
+            background: #e0e0e0;
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        .profile-image-placeholder {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            height: 1000px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .project-image-placeholder {
+            background: #f0f0f0;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+        }
+
+        .cv-download-wrapper {
+            margin-top: 10px;
+        }
+
+        .cv-download-wrapper .tmp-btn {
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+        }
+
+        .cv-download-wrapper .tmp-btn:hover {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(106, 17, 203, 0.4);
+            color: white;
+        }
+
+        .cv-download-wrapper .tmp-btn i {
+            font-size: 16px;
+        }
+
+        /* Remove gap between project image and text */
+        .portfolio-card-content-wrap {
+            padding-top: 5px !important;
+            padding: 5px 20px 20px 20px !important;
+            margin-top: 0 !important;
+        }
+
+        .latest-portfolio-card-style-two .portfolio-card-content-wrap {
+            padding-top: 5px !important;
+            padding: 5px 20px 20px 20px !important;
+            margin-top: 0 !important;
+        }
+
+        .portfoli-card-img {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+            padding: 0 !important;
+            /* Override the 20px padding from external CSS */
+        }
+
+        .img-box.v2 {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .project-card .portfoli-card-img {
+            margin-bottom: 0 !important;
+        }
+
+        .content-left {
+            padding-top: 5px !important;
+            margin-top: 0 !important;
+        }
+
+        .portfolio-card-title {
+            margin-top: 5px !important;
+            margin-bottom: 10px !important;
+        }
+
+        .latest-portfolio-card .portfoli-card-img {
+            padding: 0 !important;
+            /* Override external CSS padding */
+        }
+
+        .latest-portfolio-card-style-two .portfoli-card-img {
+            padding: 0 !important;
+            /* Specific override for style-two cards */
+            background: transparent !important;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+            background: #f8f9fa;
+        }
+
+        .img-box.v2 {
+            border-radius: 10px;
+            overflow: hidden;
+            background: transparent !important;
+        }
+
+        .portfoli-card-img .img-box.v2 a {
+            display: block;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .short-card {
+            max-height: 650px;
+            overflow: hidden;
+        }
+
+        /* Remove gap between project image and text - Comprehensive fix */
+        .portfolio-card-content-wrap {
+            padding-top: 0px !important;
+            padding: 15px 20px !important;
+            margin-top: 0 !important;
+        }
+
+        .latest-portfolio-card-style-two .portfolio-card-content-wrap {
+            padding-top: 0px !important;
+            padding: 15px 20px !important;
+            margin-top: 0 !important;
+        }
+
+        .portfoli-card-img {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .img-box.v2 {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .project-card .portfoli-card-img {
+            margin-bottom: 0 !important;
+        }
+
+        .content-left {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+        }
+
+        .latest-portfolio-card .portfoli-card-img {
+            padding: 0 !important;
+        }
+
+        .latest-portfolio-card-style-two .portfoli-card-img {
+            padding: 0 !important;
+            background: transparent !important;
+        }
+
+        /* Ensure the image container has no bottom margin */
+        .portfoli-card-img .img-box.v2 {
+            margin-bottom: 0;
+        }
+
+        /* Compact card specific spacing (SabraMusic) */
+        .compact-card .project-image-placeholder,
+        .compact-card .project-image,
+        .compact-card .img-box.v2 {
+            margin-bottom: 4px !important;
+            padding-bottom: 0 !important;
+        }
+
+        .compact-card .portfolio-card-content-wrap {
+            padding-top: 4px !important;
+        }
+
+        .compact-card .portfolio-card-title,
+        .compact-card .portfolio-card-content-wrap p {
+            margin-top: 4px !important;
+            line-height: 1.12 !important;
+        }
+
+        /* Download CV Button Styling */
+        .banner-btn-wrapper {
+            margin-top: 30px;
+        }
+
+        .download-cv-btn {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%) !important;
+            color: white !important;
+            padding: 15px 30px !important;
+            border-radius: 30px !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            font-weight: 600 !important;
+            font-size: 16px !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 15px rgba(37, 117, 252, 0.3) !important;
+            border: none !important;
+        }
+
+        .download-cv-btn:hover {
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%) !important;
+            transform: translateY(-3px) !important;
+            box-shadow: 0 6px 20px rgba(37, 117, 252, 0.4) !important;
+            color: white !important;
+        }
+
+        .download-cv-btn i {
+            font-size: 16px !important;
+        }
+
+        .my {
+            width: 500px;
+            /* Adjust width (e.g., 300px for smaller, 500px for larger) */
+            height: 500px;
+            /* Adjust height (e.g., 400px for smaller, 600px for larger) */
+            object-fit: cover;
+            /* Ensures the image fills the area without distortion */
+            border-radius: 10px;
+            /* Optional: Maintains rounded corners */
+            margin-bottom: -10px;
+        }
+
+        .about {
+            height: 580px;
+            /* Adjust height (e.g., 300px for smaller, 500px for larger) */
+            width: 500px;
+            /* Maintains aspect ratio */
+            object-fit: cover;
+            /* Ensures the image fills the area without distortion */
+            border-radius: 10px;
+            /* Optional: Maintains rounded corners */
+        }
+
+        /* GitHub Button Styling */
+        .project-github-btn {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .github-btn {
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%) !important;
+            color: white !important;
+            padding: 8px 16px !important;
+            border-radius: 20px !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+            font-weight: 500 !important;
+            font-size: 14px !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 2px 10px rgba(106, 17, 203, 0.2) !important;
+            border: none !important;
+        }
+
+        .github-btn:hover {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3) !important;
+            color: white !important;
+        }
+
+        .github-btn i {
+            font-size: 14px !important;
+        }
+
+        .skill-badge {
+            color: #31e910;
+            /* orange text */
+        }
+        .logo img {
+  width: 120px; /* adjust this value */
+  height: auto;
+}
+
+    </style>
+</head>
+
+<body class="spybody" data-spy="scroll" data-bs-target=".navbar-example2" data-offset="150">
+
+    <!-- Header Area -->
+    <header class="tmp-header-area-start header-one header--sticky header--transparent">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-content">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img class="logo-dark" src="assets/images/logo/lo.png"
+                                    alt="Manuja Pabodhana - Software Engineer">
+                                <img class="logo-white" src="assets/images/logo/lo.png"
+                                    alt="Manuja Pabodhana - Software Engineer">
+                            </a>
+                        </div>
+
+                        <div class="tmp-mainmenu-nav d-none d-xl-block">
+                            <nav class="navbar-example2 onepagenav">
+                                <ul class="tmp-mainmenu nav nav-pills">
+                                    <li class="current"><a class="smoth-animation" href="#home">Home</a></li>
+                                    <li class="nav-item"><a class="smoth-animation" href="#about">About</a></li>
+                                    <li class="nav-item"><a class="smoth-animation" href="#skills">Skills</a></li>
+                                    <li class="nav-item"><a class="smoth-animation" href="#education">Education</a></li>
+                                    <li class="nav-item"><a class="smoth-animation" href="#projects">Projects</a></li>
+                                    <li class="nav-item"><a class="smoth-animation" href="#experience">Experience</a>
+                                    </li>
+                                    <li class="nav-item"><a class="smoth-animation" href="#contact">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="tmp-header-right">
+                            <div class="social-share-wrapper d-none d-md-block">
+                                <div class="social-link">
+                                    <a href="https://linkedin.com/in/manujapabodhana" target="_blank"><i
+                                            class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="https://github.com/manujapabodhana" target="_blank"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a href="mailto:rpmanuja123@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="tmp-side-collups-area d-block d-xl-none">
+                                <button class="hamberger-menu humberger_menu_active"><i id="menuBtn"
+                                        class="fa-light fa-bars humberger-menu"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="d-block d-xl-none">
+        <div class="tmp-popup-mobile-menu">
+            <div class="inner">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="index.html" class="logo-area">
+                            <img class="logo-dark" src="assets/images/logo/white-logo-reeni.png" alt="logo">
+                            <img class="logo-white" src="assets/images/logo/white-logo-reeni.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="close-menu">
+                        <button class="close-button tmp-round-action-btn">
+                            <i class="fa-sharp fa-light fa-xmark"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <ul class="tmp-mainmenu onepagenav-click">
+                    <li><a class="smoth-animation" href="#home">Home</a></li>
+                    <li><a class="smoth-animation" href="#about">About</a></li>
+                    <li><a class="smoth-animation" href="#skills">Skills</a></li>
+                    <li><a class="smoth-animation" href="#education">Education</a></li>
+                    <li><a class="smoth-animation" href="#projects">Projects</a></li>
+                    <li><a class="smoth-animation" href="#experience">Experience</a></li>
+                    <li><a class="smoth-animation" href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="social-wrapper mt--40">
+                    <span class="subtitle">find with me</span>
+                    <div class="social-link">
+                        <a href="https://linkedin.com/in/manujapabodhana" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/manujapabodhana" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="mailto:rpmanuja123@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Area -->
+    <div class="banner-right-thumbnail-area tmp-section-gap banner-with-stars-10" id="home">
+        <div class="container">
+            <div class="row align-items-center pt-2">
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <div class="banner-right-thumb-left-content">
+                        <span class="pre-title theme-gradient">Welcome to my portfolio</span>
+                        <h1 class="title">I'm Manuja Pabodhana <br>
+                            <span class="header-caption">
+                                <span class="cd-headline clip is-full-width">
+                                    <span class="cd-words-wrapper">
+                                        <b class="is-visible theme-gradient">Software Engineer</b>
+                                        <b class="is-hidden theme-gradient">Full Stack Developer</b>
+
+                                    </span>
+                                </span>
+                        </h1>
+                        <p class="disc">Software Engineer experienced in building modern, high-performance web
+                            applications using Java, JavaScript, Node.js, and PHP with frameworks such as React.js,
+                            Express.js, Asp.Net and Laravel.</p>
+
+                        <!-- Download CV Button -->
+                        <div class="banner-btn-wrapper mt--30">
+                            <a href="assets/documents/21CIS0068_Manuja.pdf" class="tmp-btn btn-large download-cv-btn"
+                                download="Manuja_Pabodhana_CV.pdf">
+                                <i class="fa-solid fa-download"></i>
+                                Download CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2">
+                    <div class="animation-action-1">
+                        <div class="thumbnail-right-inner-main-image tmponhover paralax-image single-animation active">
+                            <img src="assets/images/projects/my.png" alt="Expense Tracker Project" class="my">
+                            <div class="tmp-light light-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-bg-light">
+            <img class="blocksync-scroll-trigger fade_in animation-order-8" src="assets/images/banner/shape/light.svg"
+                alt="Top Light Shape">
+        </div>
+        <div class="slider-bg-dot-shape">
+            <div class="wrapper blocksync-scroll-trigger blocksync-stars-area fade_in animation-order-16">
+                <div class="blocksync-stars"></div>
+                <div class="blocksync-stars2"></div>
+                <div class="blocksync-stars3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-us-area tmp-section-gapBottom" id="about">
+        <div class="container">
+            <div class="row align-items-center animation-action-3">
+                <div class="col-lg-6 pr--50 pr_lg--10 pr_md--10 pr_sm--10">
+                    <div class="about-us-left-content-wrap paralax-image">
+                        <div class="about-thumbnail-large-style-two about-us-card tmponhover single-animation active">
+                            <img src="assets/images/projects/about.png" alt="Manuja Pabodhana - Software Engineer"
+                                class="about">
+                            <div class="tmp-light light-center"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-us-right-content-wrap">
+                        <div class="section-head text-align-left mb--50">
+                            <div class="section-sub-title tmp-scroll-trigger tmp-fade-in animation-order-1">
+                                <span class="subtitle theme-gradient">About Me</span>
+                            </div>
+                            <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">Building
+                                Digital Solutions with Precision</h2>
+                            <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">I'm a passionate
+                                Software Engineer with expertise in both front-end and back-end technologies. I
+                                specialize in creating efficient, scalable, and user-focused web applications using
+                                modern technologies like React.js, Node.js, Asp.Net and Laravel.</p>
+                        </div>
+                        <div class="about-us-section-card row g-5">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="about-us-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
+                                    <div class="card-head with-flex">
+                                        <div class="logo-img">
+                                            <i class="fa-solid fa-code"></i>
+                                        </div>
+                                        <h3 class="card-title">Development</h3>
+                                    </div>
+                                    <p class="card-para">Full stack web development with modern frameworks and
+                                        technologies</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="about-us-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-5">
+                                    <div class="card-head with-flex">
+                                        <div class="logo-img">
+                                            <i class="fa-solid fa-database"></i>
+                                        </div>
+                                        <h3 class="card-title">Database</h3>
+                                    </div>
+                                    <p class="card-para">Expertise in MongoDB and MySQL database design and management
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-btn mt--40 tmp-scroll-trigger tmp-fade-in animation-order-6">
+                            <a class="tmp-btn hover-icon-reverse btn-border tmp-modern-button radius-round download-icon"
+                                href="#contact">
+                                <div class="icon-reverse-wrapper">
+                                    <span class="btn-text">Get In Touch</span>
+                                    <div class="btn-hack"></div>
+                                    <img src="assets/images/button/btg-bg.svg" alt="" class="btn-bg">
+                                    <img src="assets/images/button/btg-bg-2.svg" alt="" class="btn-bg-hover">
+                                    <span class="btn-icon"><i class="fa-regular fa-arrow-down"></i></span>
+                                    <span class="btn-icon"><i class="fa-regular fa-arrow-down"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="tmp-service-area tmp-section-gapBottom" id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-head mb--50">
+                        <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
+                            <span class="subtitle theme-gradient">Technical Skills</span>
+                        </div>
+                        <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">Technologies I
+                            Work With</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-section-card row g-5 animation-action-2">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12 paralax-image">
+                    <div
+                        class="about-us-card tmp-scroll-trigger tmponhover single-animation active tmp-fade-in animation-order-4">
+                        <div class="card-head">
+                            <div class="logo-img">
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <h3 class="card-title">Frontend Development</h3>
+                        </div>
+                        <p class="card-para">JavaScript, React.js, HTML, CSS, Material-UI</p>
+                        <div class="tmp-light light-center"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12 paralax-image">
+                    <div
+                        class="about-us-card tmp-scroll-trigger tmponhover single-animation tmp-fade-in animation-order-5">
+                        <div class="card-head">
+                            <div class="logo-img">
+                                <i class="fa-brands fa-node-js"></i>
+                            </div>
+                            <h3 class="card-title">Backend Development</h3>
+                        </div>
+                        <p class="card-para">Node.js, Express.js, Java, PHP, Laravel, Asp.Net</p>
+                        <div class="tmp-light light-center"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12 paralax-image">
+                    <div
+                        class="about-us-card tmp-scroll-trigger tmponhover single-animation tmp-fade-in animation-order-4">
+                        <div class="card-head">
+                            <div class="logo-img">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <h3 class="card-title">Databases</h3>
+                        </div>
+                        <p class="card-para">MongoDB, MySQL, Firebase</p>
+                        <div class="tmp-light light-center"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12 paralax-image">
+                    <div
+                        class="about-us-card tmp-scroll-trigger tmponhover single-animation tmp-fade-in animation-order-5">
+                        <div class="card-head">
+                            <div class="logo-img">
+                                <i class="fa-solid fa-tools"></i>
+                            </div>
+                            <h3 class="card-title">Tools & Technologies</h3>
+                        </div>
+                        <p class="card-para">Git, GitHub, Figma, VS Code, Postman, Chart.js</p>
+                        <div class="tmp-light light-center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="my-skill-area-style-two plr--120 plr_lg--30 plr_md--30 plr_sm--30 plr_mobile--15 mt--10"
+        id="education">
+        <div class="tpm-custom-box-bg position-relative overflow-hidden border--radious-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-6 col-lg-12 col-md-12">
+                        <div class="my-skill-area-left-content-wrap">
+                            <div class="section-head text-align-left">
+                                <div class="section-sub-title tmp-scroll-trigger tmp-fade-in animation-order-1">
+                                    <span class="subtitle theme-gradient">Education</span>
+                                </div>
+                                <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">My
+                                    Academic Journey</h2>
+                                <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">My educational
+                                    background has provided me with a strong foundation in computing and information
+                                    systems, preparing me for a career in software development.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-lg-12 col-md-12">
+                        <div class="my-skill-card-style-two row">
+                            <div class="col-lg-12 col-md-12 col-12">
+                                <div class="timeline-item">
+                                    <h3>BSc. Honours Degree in Computing & Information Systems</h3>
+                                    <p class="text-muted">2023–Present</p>
+                                    <p>Sabaragamuwa University of Sri Lanka</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-12">
+                                <div class="timeline-item">
+                                    <h3>G.C.E Advanced Level - Physical Science Stream (B B C)</h3>
+                                    <p class="text-muted">2021</p>
+                                    <p>H/Ruhunu Vijayaba College</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tmp-light light-top-left active"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="latest-portfolio-area custom-column-grid tmp-section-gap" id="projects">
+        <div class="container">
+            <div class="section-head mb--60">
+                <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
+                    <span class="subtitle theme-gradient">My Projects</span>
+                </div>
+                <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">Transforming Ideas into
+                    Exceptional Solutions</h2>
+                <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">Here are some of the
+                    projects I've worked on, showcasing my skills in full-stack development, problem-solving, and
+                    creating user-focused applications.</p>
+            </div>
+            <div class="row animation-action-3">
+                <!-- Project 1 -->
+                <div class="col-lg-6 col-md-6 paralax-image short-card">
+                    <div
+                        class="project-card latest-portfolio-card-style-two image-box-hover tmp-scroll-trigger single-animation active tmponhover tmp-fade-in animation-order-1">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v1">
+                                <a class="tmp-scroll-trigger tmp-zoom-in animation-order-1" href="javascript:void(0);">
+                                    <img src="assets/images/projects/fooddel.png" alt="Food-del Project"
+                                        class="project-image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a href="javascript:void(0);">Food-del</a></h3>
+                                <p>Food Delivery System built with MERN stack featuring menu browsing, secure payments,
+                                    and real-time order tracking.</p>
+                                <div class="tag-items">
+                                    <ul>
+                                        <li><span class="skill-badge">MongoDB</span></li>
+                                        <li><span class="skill-badge">Express.js</span></li>
+                                        <li><span class="skill-badge">React.js</span></li>
+                                        <li><span class="skill-badge">Node.js</span></li>
+                                    </ul>
+                                </div>
+                                <div class="project-github-btn">
+                                    <a href="https://github.com/manujapabodhana/food-del" target="_blank"
+                                        class="tmp-btn btn-small github-btn">
+                                        <i class="fa-brands fa-github"></i> View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tmp-light light-center "></div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-6 col-md-6 paralax-image">
+                    <div
+                        class="project-card latest-portfolio-card-style-two image-box-hover tmp-scroll-trigger single-animation tmponhover tmp-fade-in animation-order-2">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v1">
+                                <a class="tmp-scroll-trigger tmp-zoom-in animation-order-1" href="javascript:void(0);">
+                                    <img src="assets/images/projects/secuvision.png" alt="SecuVision Project"
+                                        class="project-image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a href="javascript:void(0);">SecuVision</a></h3>
+                                <p>AI-Powered Shoplifting Detection System using YOLO, PyTorch, and React.js with
+                                    real-time notifications.</p>
+                                <div class="tag-items">
+                                    <ul>
+                                        <li><span class="skill-badge">Python</span></li>
+                                        <li><span class="skill-badge">PyTorch</span></li>
+                                        <li><span class="skill-badge">YOLO</span></li>
+                                        <li><span class="skill-badge">React.js</span></li>
+                                    </ul>
+                                </div>
+                                <div class="project-github-btn">
+                                    <a href="https://github.com/manujapabodhana/secuvision" target="_blank"
+                                        class="tmp-btn btn-small github-btn">
+                                        <i class="fa-brands fa-github"></i> View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tmp-light light-center"></div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-6 col-md-6 paralax-image">
+                    <div
+                        class="project-card latest-portfolio-card-style-two image-box-hover tmp-scroll-trigger single-animation tmponhover tmp-fade-in animation-order-3">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v1">
+                                <a class="tmp-scroll-trigger tmp-zoom-in animation-order-1" href="javascript:void(0);">
+                                    <img src="assets/images/projects/expensetracker.png" alt="Expense Tracker Project"
+                                        class="project-image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a href="javascript:void(0);">Expense-tracker</a></h3>
+                                <p>Personal Expense Management Application with data visualization and financial
+                                    analysis features.</p>
+                                <div class="tag-items">
+                                    <ul>
+                                        <li><span class="skill-badge">MongoDB</span></li>
+                                        <li><span class="skill-badge">Express.js</span></li>
+                                        <li><span class="skill-badge">React.js</span></li>
+                                        <li><span class="skill-badge">Node.js</span></li>
+                                    </ul>
+                                </div>
+                                <div class="project-github-btn">
+                                    <a href="https://github.com/manujapabodhana/expense-tracker" target="_blank"
+                                        class="tmp-btn btn-small github-btn">
+                                        <i class="fa-brands fa-github"></i> View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tmp-light light-center"></div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-lg-6 col-md-6 paralax-image">
+                    <div
+                        class="project-card latest-portfolio-card-style-two image-box-hover tmp-scroll-trigger single-animation tmponhover tmp-fade-in animation-order-4 compact-card">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v1">
+                                <a class="tmp-scroll-trigger tmp-zoom-in animation-order-1" href="javascript:void(0);">
+                                    <img src="assets/images/projects/sabaramusic.png" alt="SabraMusic Project"
+                                        class="project-image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a href="javascript:void(0);">SabraMusic</a></h3>
+                                <p>Art Center Booking System for Sabaragamuwa University with online slot booking and
+                                    approval management.</p>
+                                <div class="tag-items">
+                                    <ul>
+                                        <li><span class="skill-badge">PHP</span></li>
+                                        <li><span class="skill-badge">Laravel</span></li>
+                                        <li><span class="skill-badge">MySQL</span></li>
+                                        <li><span class="skill-badge">HTML/CSS</span></li>
+                                    </ul>
+                                </div>
+                                <div class="project-github-btn">
+                                    <a href="https://github.com/manujapabodhana/sabramusic" target="_blank"
+                                        class="tmp-btn btn-small github-btn">
+                                        <i class="fa-brands fa-github"></i> View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tmp-light light-center"></div>
+                    </div>
+                </div>
+
+                <!-- Project 5 - New Project -->
+                <div class="col-lg-6 col-md-6 paralax-image">
+                    <div
+                        class="project-card latest-portfolio-card-style-two image-box-hover tmp-scroll-trigger single-animation tmponhover tmp-fade-in animation-order-5">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v1">
+                                <a class="tmp-scroll-trigger tmp-zoom-in animation-order-1" href="javascript:void(0);">
+                                    <img src="assets/images/projects/vehi.png" alt="Vehicle Valuation System"
+                                        class="project-image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a href="javascript:void(0);">Vehicle Valuation
+                                        System</a></h3>
+                                <p>Comprehensive platform for Rawan Auto Care with automated transaction logging and
+                                    detailed vehicle valuation reporting.</p>
+                                <div class="tag-items">
+                                    <ul>
+                                        <li><span class="skill-badge">MERN Stack</span></li>
+                                        <li><span class="skill-badge">Chart.js</span></li>
+                                        <li><span class="skill-badge">Material-UI</span></li>
+                                        <li><span class="skill-badge">REST API</span></li>
+                                    </ul>
+                                </div>
+                                <div class="project-github-btn">
+                                    <a href="https://github.com/manujapabodhana/vehicle-valuation-system"
+                                        target="_blank" class="tmp-btn btn-small github-btn">
+                                        <i class="fa-brands fa-github"></i> View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tmp-light light-center"></div>
+                    </div>
+                </div>
+
+                <!-- Project 6 - New Project -->
+                <div class="col-lg-6 col-md-6 paralax-image">
+                    <div
+                        class="project-card latest-portfolio-card-style-two image-box-hover tmp-scroll-trigger single-animation tmponhover tmp-fade-in animation-order-6">
+                        <div class="portfoli-card-img">
+                            <div class="img-box v1">
+                                <a class="tmp-scroll-trigger tmp-zoom-in animation-order-1" href="javascript:void(0);">
+                                    <img src="assets/images/projects/pers.png" alt="Personal Portfolio Website"
+                                        class="project-image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                                <h3 class="portfolio-card-title"><a href="javascript:void(0);">Personal Portfolio
+                                        Website</a></h3>
+                                <p>Responsive portfolio website showcasing projects, skills, and professional experience
+                                    with modern UI/UX design.</p>
+                                <div class="tag-items">
+                                    <ul>
+                                        <li><span class="skill-badge">HTML5</span></li>
+                                        <li><span class="skill-badge">CSS3</span></li>
+                                        <li><span class="skill-badge">JavaScript</span></li>
+                                        <li><span class="skill-badge">Bootstrap</span></li>
+                                    </ul>
+                                </div>
+                                <div class="project-github-btn">
+                                    <a href="https://github.com/manujapabodhana/personal-portfolio" target="_blank"
+                                        class="tmp-btn btn-small github-btn">
+                                        <i class="fa-brands fa-github"></i> View Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tmp-light light-center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="tmp-service-area tmp-section-gapBottom" id="experience">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-head mb--50">
+                        <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
+                            <span class="subtitle theme-gradient">Experience & Certifications</span>
+                        </div>
+                        <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">Professional
+                            Development</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Certifications</h3>
+                    <div class="about-us-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
+                        <div class="card-head with-flex">
+                            <div class="logo-img">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <h4 class="card-title">Full Stack Development</h4>
+                        </div>
+                        <p class="card-para">Simplilearn</p>
+                    </div>
+                    <div class="about-us-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
+                        <div class="card-head with-flex">
+                            <div class="logo-img">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <h4 class="card-title">Introduction to MERN Stack</h4>
+                        </div>
+                        <p class="card-para">Simplilearn</p>
+                    </div>
+                    <div class="about-us-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
+                        <div class="card-head with-flex">
+                            <div class="logo-img">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <h4 class="card-title">Postman API Fundamentals</h4>
+                        </div>
+                        <p class="card-para">Postman Academy (Student Expert)</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Volunteering & Activities</h3>
+                    <div class="about-us-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
+                        <div class="card-head with-flex">
+                            <div class="logo-img">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h4 class="card-title">Semi-finals of Cre8X UI/UX</h4>
+                        </div>
+                        <p class="card-para">General Sir John Kotelawala Defence University - 2024</p>
+                    </div>
+                    <div class="about-us-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
+                        <div class="card-head with-flex">
+                            <div class="logo-img">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h4 class="card-title">Semi-finalist - HackX 2023</h4>
+                        </div>
+                        <p class="card-para">University of Kelaniya</p>
+                    </div>
+                    <div class="about-us-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
+                        <div class="card-head with-flex">
+                            <div class="logo-img">
+                                <i class="fa-solid fa-user-group"></i>
+                            </div>
+                            <h4 class="card-title">Active Member of SOCS</h4>
+                        </div>
+                        <p class="card-para">Society of Computer Science</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="get-in-touch-area" id="contact">
+        <div class="container">
+            <div class="get-in-touch-wrapper position-relative overflow-hidden">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="contact-inner">
+                            <div
+                                class="section-head section-head-one-side text-align-left tmp-scroll-trigger tmp-fade-in animation-order-1">
+                                <span class="title-left">Let's Work Together</span>
+                            </div>
+                            <ul class="ft-link v2">
+                                <li class="tmp-scroll-trigger tmp-fade-in animation-order-1 tmp-link-animation">
+                                    <span class="ft-icon"><i class="fa-solid fa-envelope"></i></span>
+                                    <div class="ft-link-wrap">
+                                        <h4 class="link-title">E-mail:</h4>
+                                        <a href="mailto:rpmanuja123@gmail.com">rpmanuja123@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li class="tmp-scroll-trigger tmp-fade-in animation-order-2">
+                                    <span class="ft-icon"><i class="fa-solid fa-location-dot"></i></span>
+                                    <div class="ft-link-wrap">
+                                        <h4 class="link-title">Location:</h4>
+                                        <div>Colombo, Sri Lanka</div>
+                                    </div>
+                                </li>
+                                <li class="tmp-scroll-trigger tmp-fade-in animation-order-3 tmp-link-animation">
+                                    <span class="ft-icon"><i class="fa-solid fa-phone"></i></span>
+                                    <div class="ft-link-wrap">
+                                        <h4 class="link-title">Contact:</h4>
+                                        <a href="tel:+94713120265">+94 71 312 0265</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="contact-inner">
+                            <div
+                                class="section-head section-head-one-side text-align-left tmp-scroll-trigger tmp-fade-in animation-order-1">
+                                <span class="title">GET IN TOUCH</span>
+                            </div>
+                            <div class="contact-form">
+                                <div id="form-messages" class="error"></div>
+                                <form class="tmp-dynamic-form" id="contact-form" method="POST" action="mailer.php">
+                                    <div class="contact-form-wrapper row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input class="input-field" name="name" id="contact-name"
+                                                    placeholder="Your Name" type="text" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input class="input-field" name="phone" id="contact-phone"
+                                                    placeholder="Phone Number" type="tel">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <input class="input-field" id="contact-email" name="email"
+                                                    placeholder="Your Email" type="email" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <textarea class="input-field" placeholder="Your Message" name="message"
+                                                    id="contact-message" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="tmp-button-here">
+                                                <button class="tmp-btn hover-icon-reverse radius-round w-100"
+                                                    name="submit" type="submit" id="submit">
+                                                    <span class="icon-reverse-wrapper">
+                                                        <span class="btn-text">Send Message</span>
+                                                        <span class="btn-icon"><i
+                                                                class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                                                        <span class="btn-icon"><i
+                                                                class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tmp-light light-top-left active"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="tmp-footer-area footer-style-4 tmp-section-gapTop pb--50">
+        <div class="plr--150 plr_lg--30 plr_md--30 plr_sm--30 plr_mobile--15">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="for-animation-inner">
+                        <div class="footer-area text-center">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/images/logo/lo.png"
+                                        alt="Manuja Pabodhana - Software Engineer">
+                                </a>
+                            </div>
+                            <p class="description mt--30">©
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>
+                                . All rights reserved by Manuja Pabodhana.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/vendor/modernizer.js"></script>
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/vendor/jquery-ui.min.js"></script>
+    <script src="assets/js/vendor/waypoints.min.js"></script>
+    <script src="assets/js/plugins/odometer.js"></script>
+    <script src="assets/js/vendor/appear.js"></script>
+    <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
+    <script src="assets/js/vendor/tilt.js"></script>
+    <script src="assets/js/plugins/swiper.js"></script>
+    <script src="assets/js/plugins/gsap.js"></script>
+    <script src="assets/js/plugins/splittext.js"></script>
+    <script src="assets/js/plugins/scrolltigger.js"></script>
+    <script src="assets/js/plugins/scrolltoplugins.js"></script>
+    <script src="assets/js/plugins/smoothscroll.js"></script>
+    <script src="assets/js/vendor/twinmax.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/waw.js"></script>
+    <script src="assets/js/plugins/isotop.js"></script>
+    <script src="assets/js/plugins/animation.js"></script>
+    <script src="assets/js/plugins/contact.form.js"></script>
+    <script src="assets/js/vendor/backtop.js"></script>
+    <script src="assets/js/plugins/text-type.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
